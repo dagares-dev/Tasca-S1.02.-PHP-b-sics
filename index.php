@@ -9,11 +9,13 @@ $numero = 13 ;
 $decimal = 5.8;
 $nom = "Apple" ;
 $bool = true;
+const MEU_NOM = "David";
 
 echo $numero . "\n";
 echo $decimal . "\n";
 echo $nom . "\n";
 echo $bool . "\n";
+echo "<h1>" .MEU_NOM . "</h1>";
 
 echo "<br>";
 
