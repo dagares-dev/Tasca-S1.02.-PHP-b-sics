@@ -165,7 +165,68 @@ echo calcular(10, 0, "divisio") . "\n";
 </pre>
 </div>
 
+<!-- Exercici 4 -->
+<div>
+<h3>Exercici 4</h3>
+<pre>
+<?php
+
+function comptar($numero = 10, $quant = 1) {
+
+    for ($i = 1; $i <= $numero; $i = $i + $quant) {
+        echo $i . "\n";
+    }
+
+}
+
+echo "Compte fins a 10, d'1 en 1:" . "\n";
+comptar();
+
+echo "<br>";
+
+echo "Compte fins a 20, de 2 en 2:" . "\n";
+comptar(20, 2);
+
+echo "<br>";
+
+echo "Compte fins a 10, de 3 en 3:" . "\n";
+comptar(10, 3);
+
+?>
+</pre>
 </div>
+
+<!-- Exercici 5 -->
+<div>
+<h3>Exercici 5</h3>
+<pre>
+<?php
+
+function grau_estudiant($nota) {
+
+    if ($nota >= 60) {
+        return "La nota es: $nota%, has entrat a Primera Divisió";
+    } elseif ($nota >= 45) {
+        return "La nota es: $nota%, has entrat a Segona Divisió";
+    } elseif ($nota >= 33) {
+        return "La nota es: $nota%, has entrat a Tercera Divisió";
+    } else {
+        return "La nota es: $nota%, has de Reprovat";
+    }
+
+}
+
+echo grau_estudiant(83) . "\n";
+echo grau_estudiant(50) . "\n";
+echo grau_estudiant(37) . "\n";
+echo grau_estudiant(18) . "\n";
+
+?>
+</pre>
+</div>
+
+</div>
+
 
 </body>
 </html>
