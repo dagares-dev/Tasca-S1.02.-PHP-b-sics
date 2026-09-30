@@ -15,6 +15,7 @@
 
 <div class="contenedor">
 
+<!-- NIVELL 1 -->
 <!-- Exercici 1 -->
 <div>
 <h3>Exercici 1</h3>
@@ -225,8 +226,6 @@ echo grau_estudiant(18) . "\n";
 </pre>
 </div>
 
-<div>
-
 <!-- Exercici 6 -->
 <div>
 <h3>Exercici 6</h3>
@@ -253,6 +252,84 @@ for ($i = 1; $i <= 4; $i++) {
 
 ?>
 </pre>
+</div>
+</div>
+
+<hr>
+
+<!-- NIVELL 2 -->
+<h2>Nivell 2</h2>
+
+<div class="contenedor">
+
+  <!-- Exercici 1 -->
+  <div>
+  <h3>Exercici 1</h3>
+  <pre>
+<?php
+
+function Trucada($minuts) {
+
+    if ($minuts < 3) {
+        $cost = 10;
+    } else {
+        $MesMinuts = $minuts - 3;
+        $cost = 10 + ($MesMinuts * 5);
+    }
+
+    return "Aquesta trucada de $minuts minuts té un cost de $cost cèntims";
+}
+
+echo Trucada(2) . "\n";
+echo Trucada(8) . "\n";
+echo Trucada(14) . "\n";
+?>
+
+</pre>
+</div>
+
+ <!-- Exercici 2 -->
+  <div>
+  <h3>Exercici 2</h3>
+  <pre>
+ <?php
+
+function Puntuacions($p1, $p2, $p3) {
+    return $p1 + $p2 + $p3;
+}
+
+function media($p1, $p2, $p3) {
+    $suma = Puntuacions($p1, $p2, $p3);
+    return round($suma / 3);
+}
+
+function classificacio($punts) {
+    if ($punts < 4000) {
+        return "Principiant";
+    } elseif ($punts < 8000) {
+        return "Intermedi";
+    } else {
+        return "Professional";
+    }
+}
+
+function Resultat($p1, $p2, $p3) {
+    $suma = Puntuacions($p1, $p2, $p3);
+    $mitjana = media($p1, $p2, $p3);
+
+     echo "Puntuacions: $p1, $p2, $p3" . "\n";
+     echo "Suma: $suma" . "\n";
+     echo "Mitjana: $mitjana" . "\n";
+     echo "Classificació joc 1: " . classificacio($p1) . "\n";
+     echo "Classificació joc 2: " . classificacio($p2) . "\n";
+     echo "Classificació joc 3: " . classificacio($p3) . "\n";
+}
+
+Resultat(1800, 9500, 5300);
+
+?>
+</pre>
+</div>
 </div>
 
 </body>
