@@ -225,8 +225,35 @@ echo grau_estudiant(18) . "\n";
 </pre>
 </div>
 
-</div>
+<div>
 
+<!-- Exercici 6 -->
+<div>
+<h3>Exercici 6</h3>
+<pre>
+<?php
+
+function isBitten() {
+    $numero = rand(0, 1);
+
+    if ($numero == 1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+for ($i = 1; $i <= 4; $i++) {
+    if (isBitten()) {
+        echo "Intent $i: M'ha mossegat el dit" . "\n";
+    } else {
+        echo "Intent $i: No m'ha mossegat el dit" . "\n";
+    }
+}
+
+?>
+</pre>
+</div>
 
 </body>
 </html>
